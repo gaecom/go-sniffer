@@ -1,6 +1,13 @@
 
 # go-sniffer
 
+##  增加静态编译
+```sh
+sudo docker build -t ry:go-sniffer .
+# 执行编译
+docker run -itd -v $PWD:/app --rm --name go ry:go-builder 
+```
+
 > Capture mysql,redis,http,mongodb etc protocol...
 > 抓包截取项目中的数据库请求并解析成相应的语句，如mysql协议会解析为sql语句,便于调试。
 > 不要修改代码，直接嗅探项目中的数据请求。
